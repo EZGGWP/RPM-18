@@ -88,7 +88,8 @@ void MainWindow::updateData() {
 
 	nums2->append(listForNums);
 	serie->append(nums2);
-
+	chart->removeSeries(serie);
+	chart->addSeries(serie);
 	chView->update();
 
 	if (!thread->finished) {
